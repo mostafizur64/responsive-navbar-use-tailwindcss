@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaFeatherPointed, FaBars, FaXmark } from "react-icons/fa6";
+
 const Navbar = () => {
   let links = [
     { name: "Home", link: "/" },
@@ -38,10 +39,14 @@ const Navbar = () => {
               <a href={"/"}>{link.name}</a>
             </li>
           ))}
-          <button className="btn bg-blue-600 py-1 px-3 md:ml-10 rounded md:static">
+          {/* add new item  */}
+          <button className="btn bg-blue-600 py-1 px-3 md:ml-10 rounded md:static lg:hidden">
             Get Start
           </button>
         </ul>
+        <button className="btn bg-blue-600 py-1 px-3 md:ml-10 rounded md:static hidden lg:block">
+          Get Start
+        </button>
       </div>
     </div>
   );
